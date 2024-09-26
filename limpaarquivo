@@ -1,0 +1,5 @@
+echo 'INICIANDO LIMPEZA NA DF ' $1
+
+cat $1 | grep -v VALMSG-SA | grep -v INITIAL-SA | grep -v HELP-SA | grep -v COLUMN-LABEL-SA | grep -v FORMAT-SA | grep -v LABEL-SA | grep -v MAX-WIDTH | grep -v CAN-READ | grep -v CAN-WRITE | grep -v AREA | grep -v chr(10) > $2
+
+echo 'CONCLUIDO ! '

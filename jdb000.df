@@ -1,0 +1,248 @@
+ADD TABLE "jdb001"
+  AREA "cooperate"
+  LABEL "Grupos"
+  DESCRIPTION "Grupos
+
+
+"
+  DUMP-NAME "jdb001"
+
+ADD FIELD "data-mvto" OF "jdb001" AS date 
+  DESCRIPTION "Data do cadastramento"
+  FORMAT "99/99/9999"
+  INITIAL ?
+  LABEL "DataSorteio..."
+  POSITION 2
+  SQL-WIDTH 4
+  COLUMN-LABEL "Data"
+  HELP "data do cadastramento"
+  ORDER 10
+  MANDATORY
+
+ADD FIELD "grupo1" OF "jdb001" AS integer 
+  FORMAT "99"
+  INITIAL "0"
+  LABEL "GrupoPP..."
+  POSITION 4
+  SQL-WIDTH 4
+  COLUMN-LABEL "Primeiro"
+  ORDER 30
+
+ADD FIELD "grupo2" OF "jdb001" AS integer 
+  FORMAT "99"
+  INITIAL "0"
+  LABEL "GrupoSP"
+  POSITION 5
+  SQL-WIDTH 4
+  COLUMN-LABEL "Segundo"
+  ORDER 40
+
+ADD FIELD "grupo3" OF "jdb001" AS integer 
+  FORMAT "99"
+  INITIAL "0"
+  LABEL "GrupoTP"
+  POSITION 6
+  SQL-WIDTH 4
+  COLUMN-LABEL "Terceiro"
+  ORDER 50
+
+ADD FIELD "grupo4" OF "jdb001" AS integer 
+  FORMAT "99"
+  INITIAL "0"
+  LABEL "GrupoQAP"
+  POSITION 7
+  SQL-WIDTH 4
+  COLUMN-LABEL "Quarto"
+  ORDER 60
+
+ADD FIELD "grupo5" OF "jdb001" AS integer 
+  FORMAT "99"
+  INITIAL "0"
+  LABEL "GrupoQiPremio"
+  POSITION 8
+  SQL-WIDTH 4
+  COLUMN-LABEL "Quinto"
+  ORDER 70
+
+ADD FIELD "hora" OF "jdb001" AS character 
+  DESCRIPTION "hora do processo"
+  FORMAT "x(8)"
+  INITIAL ?
+  LABEL "Hora............"
+  POSITION 13
+  SQL-WIDTH 16
+  COLUMN-LABEL "Hora"
+  HELP "hora do processo"
+  ORDER 110
+  MANDATORY
+
+ADD FIELD "Banca" OF "jdb001" AS character 
+  FORMAT "x(20)"
+  INITIAL ""
+  LABEL "Banca!Jogo"
+  POSITION 14
+  SQL-WIDTH 40
+  COLUMN-LABEL "Banca...."
+  ORDER 120
+
+ADD INDEX "jdb001-1" ON "jdb001" 
+  AREA "cooperate"
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "data-mvto" ASCENDING 
+  INDEX-FIELD "Banca" ASCENDING 
+  INDEX-FIELD "hora" ASCENDING 
+
+ADD TABLE "jdb002"
+  AREA "cooperate"
+  LABEL "Horario"
+  DESCRIPTION "Horario!!"
+  DUMP-NAME "jdb002"
+
+ADD FIELD "horario" OF "jdb002" AS integer 
+  FORMAT "999999"
+  INITIAL "0"
+  LABEL "HorarioJogo..."
+  POSITION 2
+  SQL-WIDTH 4
+  COLUMN-LABEL "Horario"
+  ORDER 10
+
+ADD FIELD "sigla" OF "jdb002" AS character 
+  DESCRIPTION "Sigla da conta"
+  FORMAT "x(20)"
+  INITIAL ""
+  LABEL "Sigla..........."
+  POSITION 3
+  SQL-WIDTH 40
+  COLUMN-LABEL "Sigla"
+  HELP "Sigla da conta"
+  ORDER 20
+
+ADD INDEX "jdb002-1" ON "jdb002" 
+  AREA "cooperate"
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "sigla" ASCENDING 
+  INDEX-FIELD "horario" ASCENDING 
+
+ADD TABLE "jdb003"
+  AREA "cooperate"
+  LABEL "Milhar"
+  DESCRIPTION "Tabela de milhar"
+  DUMP-NAME "jdb003"
+  FILE-MISC26 "Milhar!"
+
+ADD FIELD "data" OF "jdb003" AS date 
+  DESCRIPTION "Data do cadastramento"
+  FORMAT "99/99/9999"
+  INITIAL ?
+  LABEL "Data............"
+  POSITION 2
+  SQL-WIDTH 4
+  COLUMN-LABEL "Data"
+  HELP "data do cadastramento"
+  ORDER 10
+  MANDATORY
+
+ADD FIELD "hora" OF "jdb003" AS character 
+  DESCRIPTION "hora do processo"
+  FORMAT "x(8)"
+  INITIAL ?
+  LABEL "Hora............"
+  POSITION 3
+  SQL-WIDTH 16
+  COLUMN-LABEL "Hora"
+  HELP "hora do processo"
+  ORDER 20
+  MANDATORY
+
+ADD FIELD "premio1" OF "jdb003" AS integer 
+  FORMAT "zzzz"
+  INITIAL "0"
+  LABEL "PrimeiroPremio"
+  POSITION 4
+  SQL-WIDTH 4
+  COLUMN-LABEL "Primeiro!Premio.."
+  ORDER 30
+
+ADD FIELD "premio2" OF "jdb003" AS integer 
+  FORMAT "9999"
+  INITIAL "0"
+  LABEL "SegundoPremio"
+  POSITION 5
+  SQL-WIDTH 4
+  COLUMN-LABEL "Segundo!Premio.."
+  ORDER 40
+
+ADD FIELD "premio3" OF "jdb003" AS integer 
+  FORMAT "9999"
+  INITIAL "0"
+  LABEL "TerceiroPremio"
+  POSITION 6
+  SQL-WIDTH 4
+  COLUMN-LABEL "Terceiro!Premio.."
+  ORDER 50
+
+ADD FIELD "premio4" OF "jdb003" AS integer 
+  FORMAT "9999"
+  INITIAL "0"
+  LABEL "QuartoPremio"
+  POSITION 7
+  SQL-WIDTH 4
+  COLUMN-LABEL "Quarto!Premio.."
+  ORDER 60
+
+ADD FIELD "premio5" OF "jdb003" AS integer 
+  FORMAT "9999"
+  INITIAL "0"
+  LABEL "QuintoPremio"
+  POSITION 8
+  SQL-WIDTH 4
+  COLUMN-LABEL "Quinto!Premio.."
+  ORDER 70
+
+ADD FIELD "Banca" OF "jdb003" AS character 
+  FORMAT "x(20)"
+  INITIAL ""
+  LABEL "Banca!Jogo"
+  POSITION 9
+  SQL-WIDTH 40
+  COLUMN-LABEL "Banca...."
+  ORDER 80
+
+ADD INDEX "jdb003-01" ON "jdb003" 
+  AREA "cooperate"
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "data" ASCENDING 
+  INDEX-FIELD "Banca" ASCENDING 
+  INDEX-FIELD "hora" ASCENDING ABBREVIATED 
+
+ADD TABLE "jdb005"
+  AREA "cooperate"
+  LABEL "Numeros Primos"
+  DESCRIPTION "Numeros Primos"
+  DUMP-NAME "jdb005"
+
+ADD FIELD "numero" OF "jdb005" AS integer 
+  FORMAT "9999"
+  INITIAL "0"
+  LABEL "Numero.........."
+  POSITION 2
+  SQL-WIDTH 4
+  COLUMN-LABEL "Numero"
+  HELP "Numero da declaracao"
+  ORDER 10
+  MANDATORY
+
+ADD INDEX "jdb005-01" ON "jdb005" 
+  AREA "cooperate"
+  PRIMARY
+  INDEX-FIELD "numero" ASCENDING 
+
+.
+PSC
+cpstream=ISO8859-1
+.
+0000004551

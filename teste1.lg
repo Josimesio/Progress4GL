@@ -1,0 +1,23 @@
+
+                Sat May 19 12:28:17 2018
+[2018/05/19@12:28:17.858-0300] P-8380       T-9636  I DBUTIL   : (451)   prostrct create session begin for jorossini on CON:. 
+[2018/05/19@12:28:17.860-0300] P-8380       T-9636  I DBUTIL   : (12862) Structure file C:\Users\jorossini\Desktop\COOPERATE\BICHO\bicho\teste1.st used to create database with blocksize 4096. 
+[2018/05/19@12:28:17.863-0300] P-8380       T-9636  I DBUTIL   : (334)   prostrct create session end. 
+[2018/05/19@12:28:17.867-0300] P-8380       T-9636  I DBUTIL   : (451)   procopy session begin for jorossini on CON:. 
+[2018/05/19@12:28:17.932-0300] P-8380       T-9636  I DBUTIL   : (334)   procopy session end. 
+
+                Sat May 19 12:28:17 2018
+[2018/05/19@12:28:17.940-0300] P-8380       T-9636  I          : (451)   procopy get default SQL DBA session begin for jorossini on CON:. 
+[2018/05/19@12:28:17.941-0300] P-8380       T-9636  I          : (15321) Before Image Log Initialization at block 0  offset 0. 
+[2018/05/19@12:28:18.065-0300] P-8380       T-9636  I          : (14867) Procopy -newinstance Created a new database GUID. 
+[2018/05/19@12:28:18.069-0300] P-8380       T-9636  I          : (15109) At Database close the number of live transactions is 0. 
+[2018/05/19@12:28:18.069-0300] P-8380       T-9636  I          : (15743) Before Image Log Completion at Block 0 Offset 2657. 
+[2018/05/19@12:28:18.071-0300] P-8380       T-9636  I          : (334)   procopy get default SQL DBA session end. 
+
+                Sat May 19 12:28:25 2018
+[2018/05/19@12:28:25.479-0300] P-3812       T-9532  I ABL      : (451)   Single-user session begin for jorossini on CON:. 
+[2018/05/19@12:28:25.480-0300] P-3812       T-9532  I ABL      : (15321) Before Image Log Initialization at block 0  offset 2657. 
+[2018/05/19@12:28:25.488-0300] P-3812       T-9532  I ABL      : (7129)  Usr 0 set name to jorossini. 
+[2018/05/19@12:43:01.480-0300] P-3812       T-9532  I ABL      : (15109) At Database close the number of live transactions is 0. 
+[2018/05/19@12:43:01.480-0300] P-3812       T-9532  I ABL      : (15743) Before Image Log Completion at Block 0 Offset 2717. 
+[2018/05/19@12:43:01.484-0300] P-3812       T-9532  I ABL      : (334)   Single-user session end. 
